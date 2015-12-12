@@ -1,0 +1,206 @@
+.coverwrapper {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.coverwrapper img {
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 10px 7px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px 0px 10px 7px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 0px 10px 7px rgba(50, 50, 50, 0.75);
+    /* border:1px solid #FFF; */
+    border: 1px solid #666;
+    /* -webkit-box-reflect: below 1px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(white)); */
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255, 255, 255, 0.3)));
+    /*   -webkit-box-reflect: right 1px -webkit-gradient(linear, left top, left bottom, from(black), color-stop(.1, black), to(transparent));
+  */
+}
+
+.coverwrap {
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(http://d23z6sds1eazhh.cloudfront.net/gfx/logo-stripes-trans33p.png);
+}
+
+#coverflow {
+    display: block;
+    height: 300px;
+    width: 680px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 20px;
+    /* margin-top: 50px; */
+}
+
+.coverplay {}
+
+#coverflow img {
+    width: 200px;
+    height: 200px;
+    float: left;
+    border: 1px solid #666;
+    position: relative;
+    margin: -10px;
+    margin-top: 0;
+    -webkit-box-reflect: below 1px -webkit-gradient(linear, left top, left bottom, from(black), color-stop(.1, black), to(transparent));
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255, 255, 255, 0.99)));
+    -webkit-box-shadow: 0px 0px 10px 7px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px 0px 10px 7px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 0px 10px 7px rgba(50, 50, 50, 0.75);
+}
+
+img#cf-1 {
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+    margin-top: 40px;
+    /*
+    -moz-transform:rotate(-15deg);
+    -webkit-transform:rotate(-15deg);
+ */
+}
+
+img#cf-1:hover,
+img#cf-3:hover {
+    z-index: 3;
+}
+
+img#cf-3 {
+    width: 300px;
+    height: 300px;
+    z-index: 2;
+    border: 2px solid #FFF;
+    -webkit-box-reflect: below 15px -webkit-gradient(linear, left top, left bottom, from(black), color-stop(.0, black), to(transparent));
+    /* -moz-transform:rotate(-5deg);
+    -webkit-transform:rotate(-5deg); */
+}
+
+img#cf-3 {
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+    margin-top: 40px;
+    /* -moz-transform:rotate(15deg);
+    -webkit-transform:rotate(15deg);
+
+ */
+}
+
+@media(min-width:1200px) {
+    #coverflow {
+        display: block;
+        height: 400px;
+        width: 1000px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding: 35px;
+        /* margin-top: 50px; */
+    }
+    .coverplay {}
+    #coverflow img {
+        width: 300px;
+        height: 300px;
+        float: left;
+        border: 1px solid #666;
+        position: relative;
+        margin: -30px;
+        margin-top: 0;
+        -webkit-box-reflect: below 1px -webkit-gradient(linear, left top, left bottom, from(black), color-stop(.1, black), to(transparent));
+        -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255, 255, 255, 0.99)));
+        -webkit-box-shadow: 0px 0px 10px 7px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow: 0px 0px 10px 7px rgba(50, 50, 50, 0.75);
+        box-shadow: 0px 0px 10px 7px rgba(50, 50, 50, 0.75);
+    }
+    img#cf-1 {
+        width: 300px;
+        height: 300px;
+        z-index: 1;
+        margin-top: 80px;
+        /*
+    -moz-transform:rotate(-15deg);
+    -webkit-transform:rotate(-15deg);
+ */
+    }
+    img#cf-3 {
+        width: 500px;
+        height: 500px;
+        z-index: 2;
+        border: 2px solid #FFF;
+        -webkit-box-reflect: below 15px -webkit-gradient(linear, left top, left bottom, from(black), color-stop(.0, black), to(transparent));
+        /* -moz-transform:rotate(-5deg);
+    -webkit-transform:rotate(-5deg); */
+    }
+    img#cf-3 {
+        width: 300px;
+        height: 300px;
+        z-index: 1;
+        margin-top: 80px;
+        /* -moz-transform:rotate(15deg);
+    -webkit-transform:rotate(15deg);
+
+ */
+    }
+}
+
+
+
+
+@media(max-width:480px) {
+
+    #coverflow {
+        display: block;
+        height: 200px;
+        width: 350px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding: 20px;
+        /* margin-top: 50px; */
+    }
+    #coverflow img {
+        width: 100px;
+        height: 100px;
+        float: left;
+        border: 1px solid #666;
+        position: relative;
+        margin: -10px;
+        margin-top: 0;
+        -webkit-box-reflect: below 1px -webkit-gradient(linear, left top, left bottom, from(black), color-stop(.1, black), to(transparent));
+        -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255, 255, 255, 0.8)));
+        -webkit-box-shadow: 0px 0px 10px 7px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow: 0px 0px 10px 7px rgba(50, 50, 50, 0.75);
+        box-shadow: 0px 0px 10px 7px rgba(50, 50, 50, 0.75);
+    }
+    img#cf-1 {
+        width: 100px;
+        height: 100px;
+        z-index: 1;
+        margin-top: 20px;
+        /*
+    -moz-transform:rotate(-15deg);
+    -webkit-transform:rotate(-15deg);
+ */
+    }
+    img#cf-3 {
+        width: 150px;
+        height: 150px;
+        z-index: 2;
+        border: 2px solid #FFF;
+        -webkit-box-reflect: below 15px -webkit-gradient(linear, left top, left bottom, from(black), color-stop(.0, black), to(transparent));
+        /* -moz-transform:rotate(-5deg);
+    -webkit-transform:rotate(-5deg); */
+    }
+    img#cf-3 {
+        width: 100px;
+        height: 100px;
+        z-index: 1;
+        margin-top: 20px;
+        /* -moz-transform:rotate(15deg);
+    -webkit-transform:rotate(15deg);
+
+ */
+    }
+}
