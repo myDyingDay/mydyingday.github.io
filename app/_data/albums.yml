@@ -76,7 +76,7 @@
 - title: Breathing
   published: y
   featured: y
-  feature_sort: 1
+  feature_sort: 3
   year: 2014
   slug: breathing
   cover: /img/breathing_cover_500.jpg
@@ -96,7 +96,7 @@
 - title: Tainted Ways
   published: y
   featured: y
-  feature_sort: 3
+  feature_sort: 1
   format: Single (stream and download)
   year: 2013
   slug: tainted-ways
