@@ -325,10 +325,10 @@ module.exports = function (grunt) {
     buildcontrol: {
       dist: {
         options: {
-          remote: 'https://github.com/Djarnis/yo-jekyllrb.git',
+          remote: 'https://github.com/myDyingDay/mydyingday.github.io.git',
           branch: 'gh-pages',
-          commit: false,
-          push: false
+          commit: true,
+          push: true
         }
       }
     },
