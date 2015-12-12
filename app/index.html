@@ -1,11 +1,521 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: my dyingDay - rock n roll from Copenhagen
 ---
+<span id="home"></span>
+<div class="navbar-wrapper " id="header">
+    <div
+        class="
+            navbar
+            xxxnavbar-default
+            navbar-inverse"
+        role="navigation"
+        style="margin-bottom:0;"
+        >
 
-<section class="home posts">
-  <h1>Blog Posts</h1>
-  {% for post in site.posts %}
-    <article><time>{{ post.date | date_to_string }}</time> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></article>
-  {% endfor %}
-</section>
+        <div class="container">
+            <div class="navbar-header">
+                <button
+                    type="button"
+                    class="navbar-toggle"
+                    data-toggle="collapse"
+                    data-target=".navbar-collapse"
+                    >
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" id="toplogo" href="#home">my dyingDay</a>
+            </div>
+
+            <div class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav" id="site-nav">
+
+                    <li>
+                        <a href="#music" onclick="_gaq.push(['_trackPageview' ,'/music/']);">
+                            <span class="glyphicon glyphicon-play"></span> Music
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#media" onclick="_gaq.push(['_trackPageview' ,'/media/']);">
+                            <span class="glyphicon glyphicon-film"></span> Video
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#live" onclick="_gaq.push(['_trackPageview' ,'/live/']);">
+                            <span class="glyphicon glyphicon-road"></span> Live
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#band" onclick="_gaq.push(['_trackPageview' ,'/band/']);">
+                            <span class="glyphicon glyphicon-camera"></span> About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#connect" onclick="_gaq.push(['_trackPageview' ,'/connect/']);">
+                            <span class="glyphicon glyphicon-heart"></span> Connect
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="coverwrap">
+
+    <div id="headercontent">
+        <div class="container xpanel" style="text-align:center; ">
+            <h1>
+                <span class="hidden-xs">
+                    Hello World!
+                </span>
+                <span class="hidden-md hidden-lg hidden-sm">
+                    Hi!
+                </span>
+
+                We are my dyingDay!
+            </h1>
+            <h2 class="intro">
+                - a 99.9% D.I.Y. rock band from Copenhagen, Denmark.
+            </h2>
+        </div>
+    </div>
+
+    <!-- COVER FLOW -->
+    {% assign covers = (site.data.albums | where: 'published','y' | where: 'featured', 'y' | sort: 'feature_sort') %}
+
+    {% if covers.size == 0 %}
+        <!-- No covers :/ -->
+    {% endif %}
+
+    <div class="wrapper">
+        <div id="coverflow">
+
+            {% for cover in covers limit:3 %}
+                <a href="#{{ cover.slug }}"><img id="cf-{{ cover.slug }}" src="{{ cover.cover }}" data-artist="{{ cover.artist }}" data-album="{{ cover.title }}" /></a>
+            {% endfor %}
+
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Status -->
+<div id="statusblock">
+    <div class="container">
+        <h4>
+            <span class="text-muted">
+                Current Status:
+                We are currently recording new material ...
+            </span>
+        </h4>
+    </div>
+</div>
+<div id="twitterstatuscarousel">
+    <div id="twitter-feed"></div>
+    <div class="container">
+    </div>
+</div>
+
+
+<!-- ALBUMS -->
+{% assign albums = (site.data.albums | where: 'published','y') %}
+
+{% if albums.size == 0 %}
+    <!-- No albums :/ -->
+{% endif %}
+
+<div id="music" class="xpanel">
+    <div class="container">
+        <h2 class="headline border-bot">
+            <span class="glyphicon glyphicon-play"></span>
+            Music <small>by my dyingDay</small>
+        </h2>
+
+        {% for album in albums %}
+
+            <div class="row album" id="{{ album.slug }}">
+                <div class="col-xs-3">
+                    <div class="coverwrapper">
+                        <a
+                            href="javascript:;"
+                            onclick="OpenAlbum('{{ album.slug }}','01');"
+                        >
+                            <img
+                                src="{{ album.cover }}"
+                                data-artist="{{ album.artist }}"
+                                data-album="{{ album.title }}"
+                                width="100%"
+                            />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-9">
+                    <h3>
+                        {{ album.title }}
+
+                        <small>
+                            {{ album.year }} {{ album.format }}
+                        </small>
+
+                    </h3>
+
+                    <!-- TRACKS -->
+                    <table class="table table-hover">
+                        <tbody>
+                            {% for track in album.tracks %}
+                            <tr>
+                                <td>
+                                    <a
+                                        href="javascript:;"
+                                        onclick="OpenAlbum('{{ album.slug }}','{{ track.number }}')"
+                                    >
+                                        <small class="hidden-mob text-muted">
+                                            {{ track.number }}
+                                        </small>
+                                        <span class="glyphicon glyphicon-play"></span>
+                                        {{ track.title }}
+                                    </a>
+                                </td>
+
+                                <td
+                                    align="right"
+                                    style="text-align:right;"
+                                    class="hidden-mob"
+                                >
+                                    <small>{{ track.duration }}</small>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                    <div class="albumavailablity">
+
+                        <small class="text-muted">Available at:</small>
+
+                        {% if album.itunes %}
+                            <a
+                                href="{{ album.itunes }}"
+                                target="_blank">
+
+                                <img src="/img/badge_itunes-lrg.png" alt="Get {{ album.title }} on iTunes">
+
+                            </a>
+                        {% endif %}
+
+
+                        {% if album.spotify %}
+                            <a
+                                href="{{ album.spotify }}"
+                                target="_blank">
+
+                                <img
+                                    src="/img/badge_spotify-lrg.png"
+                                    alt="Stream {{ album.title }} on Spotify">
+
+                            </a>
+                        {% endif %}
+
+                        {% if album.reverb %}
+                            <a
+                                href="{{ album.reverb }}"
+                                target="_blank">
+
+                                <img
+                                    src="/img/badge_reverb-lrg.png"
+                                    alt="Stream {{ album.title }} on Reverb Nation">
+
+                            </a>
+                        {% endif %}
+
+                        {% if album.bandcamp %}
+                            <a
+                                href="{{ album.bandcamp }}"
+                                target="_blank">
+
+                                <img
+                                    src="/img/badge_bandcamp-lrg.png"
+                                    alt="Stream {{ album.title }} on Bandcamp">
+
+                            </a>
+                        {% endif %}
+
+                        {% if album.soundcloud %}
+                            <a
+                                href="{{ album.soundcloud }}"
+                                target="_blank">
+
+                                <img
+                                    src="/img/badge_soundcloud-lrg.png"
+                                    alt="Stream {{ album.title }} on Sound Cloud">
+
+                            </a>
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+
+<!-- Videos -->
+{% assign videos = (site.data.videos) %}
+<!--
+where: 'published','y'
+-->
+<div id="media" class="xpanel">
+    <div class="container">
+        <h2 class="headline">
+            <span class="glyphicon glyphicon-film"></span>
+            Videos <small>by my dyingDay</small>
+        </h2>
+        <blockquote>
+            <h3>
+                Here are some of our videos. We publish on <a href="http://www.youtube.com/mydyingdayrocks" target="_blank" style="color:#FFF">YouTube - subscribe to our channel</a>!
+            </h3>
+        </blockquote>
+
+
+        <ul class="mediastream" id="videomediastreamlist">
+
+            {% for video in videos %}
+            <li>
+                <div class="mediaitem">
+                    <a href="#videomediastreamlist" onclick="playVideo('{{ video.video_id }}', '{{ video.title }} {{ video.subtitle }}')">
+
+                        <img src="{{ video.image }}" alt="{{ video.title }} {{ video.subtitle }}" title="{{ video.title }} {{ video.subtitle }}" />
+
+                        <span class="playbutton"><span class="glyphicon glyphicon-expand"></span></span>
+
+                        <span class="medialabel">
+                            {{ video.title }}
+                            <small>{{ video.subtitle }}</small>
+                        </span>
+
+                    </a>
+                </div>
+            </li>
+            {% endfor %}
+
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div id="videoplayer"></div>
+</div>
+
+
+
+<div id="live" class="xpanel">
+    <div class="container">
+        <h2 class="headline no-border">
+            <span class="glyphicon glyphicon-road"></span>
+            LIVE <small>- schedule for my dyingDay</small>
+        </h2>
+        <p class="liveintro">
+            <span class="glyphicon glyphicon-info-sign"></span>
+            {# We are currently working hard recording our debut album! #}
+        </p>
+        <h4>2014</h4>
+        <table class="table table-hover liveschedule">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Event</th>
+                    <th>Venue</th>
+                    <th>Location</th>
+                    <th>Info</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>June 06</td>
+                    <td><strong>my dyingDay</strong> + Superdirt</td>
+                    <td>D&aelig;monens Port</td>
+                    <td><small class="text-muted">Copenhagen (DK)</small></td>
+                    <td><a href="https://www.facebook.com/events/301675826656673/" target="_blank">Facebook Event</a></td>
+                </tr>
+                <tr>
+                    <td>T.B.A.</td>
+                    <td><strong>Album Release Party</strong></td>
+                    <td>High Voltage</td>
+                    <td><small class="text-muted">Copenhagen (DK)</small></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="5">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="livepast">
+            In 2013 you missed us performing at Rock Island, Sin City, PH Cafeen, Lygten Station &amp; other fine venues.
+        </p>
+    </div>
+</div>
+<div id="band" class="xpanel">
+    <div class="container">
+        <h2 class="headline">
+            <span class="glyphicon glyphicon-camera"></span>
+            The Band
+            <small>- About my dyingDay</small>
+        </h2>
+    </div>
+    <div style="background-color:rgba(255, 255, 255, 0.1); margin-top:10px;padding-bottom:20px;margin-bottom:20px;">
+        <div class="container">
+            <ul class="lineup">
+                <li>
+                    <img src="/img/members/anders231.jpg" class="img-circle" />
+                    <h3 class="membername bigtype">Anders</h3>
+                    <span class="memberrole">Vocal &amp; Guitar</span>
+                    <div class="clearfix"></div>
+                </li>
+                <li>
+                    <img src="/img/members/kim231.jpg" class="img-circle" />
+                    <h3 class="membername bigtype">Kim</h3>
+                    <span class="memberrole">Vocal &amp; Guitar</span>
+                    <div class="clearfix"></div>
+                </li>
+                <li>
+                    <img src="/img/members/thomas231.jpg" class="img-circle" />
+                    <h3 class="membername bigtype">Thomas</h3>
+                    <span class="memberrole">Bass &amp; Stiches</span>
+                    <div class="clearfix"></div>
+                </li>
+                <li>
+                    <img src="/img/members/jeppe231.jpg" class="img-circle" />
+                    <h3 class="membername bigtype">Jeppe</h3>
+                    <span class="memberrole">Drums &amp; Cans</span>
+                    <div class="clearfix"></div>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <h3 class="bigtype">We are: my dyingDay!</h3>
+                <p>We blend old-school heavy rock with electronica using wooden guitars, accoustic drums, home-build pedal-boards and new technology.</p>
+                <br>
+                <h4 class="bigtype">Where?</h4>
+                <p>We are located in Copenhagen, Denmark.</p>
+                <br>
+                <h4 class="bigtype">Influences:</h4>
+                <p>We are influenced by Black Sabbath, Nine Inch Nails, Foo Fighters, Ministry, Mustasch &amp; other fine artists.</p>
+                <br>
+                <h4 class="bigtype">We sound like ...</h4>
+                <p>... Well, go listen to our music ;)</p>
+            </div>
+            <br>
+            <div class="col-sm-4">
+                <h3>Mile Stones</h3>
+                <ul class="milestonelist">
+                    <li><small class="bigtype">2006:</small> my dyingDay was formed</li>
+                    <li><small class="bigtype">2007:</small> Promo CD "Fragile Alliance" released</li>
+                    <li><small class="bigtype">2009:</small> "Fragile Alliance" is featured in the 26th and final episode of Swedish detective series, "Beck - Burried Alive"</li>
+                    <li><small class="bigtype">2012:</small> Wrote, recorded and released 1 song each month througout the year.</li>
+                    <li><small class="bigtype">2013:</small> Voted best newcomer in the "Indie Spotlight" - An american radio-show</li>
+                    <li><small class="bigtype">2013:</small> First single out in 180 countries, available on iTunes, Spotify and more.</li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="connect" class="xpanel">
+    <div class="container">
+        <h2 class="headline"><span class="glyphicon glyphicon-heart"></span> Connect <small>with my dyingDay</small></h2>
+        <h3 class="bigtype" style="text-align:center;line-height:200%;">Fans &amp; Music Lovers<br> Connect with my dyingDay here:</h3>
+        <br>
+    </div>
+    <div style="background-color:rgba(0, 0, 0, 0.5); padding-bottom:20px;padding-top:20px;margin-bottom:20px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2" style="text-align:center;">
+                    <a href="http://www.facebook.com/mydyingdaymusic" target="_blank"><img class="xsocial-icon" src="/img/icons/facebook.png" alt="my dyingDay on Facebook" title="my dyingDay on Facebook"></a>
+                </div>
+                <div class="col-sm-2" style="text-align:center;">
+                    <a href="http://twitter.com/mydyingDayRocks" target="_blank"><img class="xsocial-icon" src="/img/icons/twitter.png" alt="my dyingDay on Twitter" title="my dyingDay on Twitter"></a>
+                </div>
+                <div class="col-sm-2" style="text-align:center;">
+                    <a href="http://www.reverbnation.com/mydyingday" target="_blank"><img class="xsocial-icon" src="/img/icons/reverb.png" alt="my dyingDay on Reverb Nation" title="my dyingDay on Reverb Nation"></a>
+                </div>
+                <div class="col-sm-2" style="text-align:center;">
+                    <a href="http://instagram.com/mydyingday" target="_blank"><img class="xsocial-icon" src="/img/icons/instagram.png" alt="my dyingDay on Instagram" title="my dyingDay on Instagram"></a>
+                </div>
+                <div class="col-sm-2" style="text-align:center;">
+                    <a href="https://itunes.apple.com/dk/artist/my-dyingday/id787102568" target="_blank"><img class="xsocial-icon" src="/img/icons/itunes.png" alt="my dyingDay on iTunes" title="my dyingDay on iTunes"></a>
+                </div>
+                <div class="col-sm-2" style="text-align:center;">
+                    <a href="https://play.spotify.com/artist/1mtFhpkRzcG9bhIVPTXMbd" target="_blank"><img class="xsocial-icon" src="/img/icons/spotify.png" alt="my dyingDay on Spotify" title="my dyingDay on Spotify"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <br>
+        <br>
+        <h3>Radio Stations, Press &amp; Media - get your free samples!</h3>
+        <p>
+            We are happy to provide you with free samples for air-play on your radio-show, or for review in your awesome magazine! Just send us an e-mail with your name, your station / magazine name and other info, and we'll get back to you in snap! You can reach us at <a href="/cdn-cgi/l/email-protection#f79a8e938e9e999093968e8598949c84b7909a969e9bd994989a"><span class="__cf_email__" data-cfemail="127f6b766b7b7c7576736b607d71796152757f737b7e3c717d7f">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">
+/* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("data-cfhash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}t.parentNode.removeChild(t);}}catch(u){}}()/* ]]> */</script></a>.
+            <br>
+            <br>
+        </p>
+        <h3>Booking &amp; Management</h3>
+        <p>If you wish to hire us for a show, a festival or a TV-performance, please send us an e-mail and we'll get back to you in a snap. You can reach us at <a href="/cdn-cgi/l/email-protection#6e03170a170700090a0f171c010d051d2e09030f0702400d0103"><span class="__cf_email__" data-cfemail="711c081508181f16151008031e121a0231161c10181d5f121e1c">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">
+/* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("data-cfhash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}t.parentNode.removeChild(t);}}catch(u){}}()/* ]]> */</script></a>.
+        </p>
+    </div>
+</div>
+<br>
+<br>
+
+
+<footer>
+    <div class="container">
+        <p class="pull-right"><a href="#home">Top</a></p>
+        <p>
+            &copy; 2015 my dyingDay &middot; Coded on crack in Copenhagen, Denmark
+        </p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</footer>
+<div class="modal fade" id="playerwin">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="playermodaltitle"></h4>
+            </div>
+            <div class="modal-body" id="playermodalbody"></div>
+        </div>
+    </div>
+</div>
+<div id="player">
+</div>
+
