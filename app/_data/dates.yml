@@ -1,0 +1,34 @@
+# In 2013 you missed us performing at
+# Rock Island,
+# Sin City,
+# PH Cafeen,
+# Lygten Station &amp; other fine venues.
+
+# FORMAT:
+# ----------------------------------
+# - title: title
+#   date: YYYY-MM-DD
+#   venue: Venue
+#   address: Address
+#   zip: Zip
+#   city: City
+#   country: CC
+#   facebook: http://facebook-event-link
+#   cancelled: n (if y then yeah)
+# ----------------------------------
+#
+#
+
+
+- title: my dyingDay + Superdirt
+  date: 2014-06-06
+  venue: Dæmonens Port
+  city: Copenhagen
+  country: DK
+  facebook:
+
+- title: Album Release Party
+  date: tba
+  venue: High Voltage
+  city: Copenhagen
+  country: DK

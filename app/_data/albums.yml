@@ -1,0 +1,214 @@
+# - title: XXXX
+#   published: n
+#   year: 2016
+#   format: xxxx
+#   slug: xxxx
+#   cover: xxxx
+#   tracks:
+
+#     - title: xxxx
+#       duration: xxxx
+#       spotity: xx
+#       itunes: xxx
+#       number: '01'
+
+#     - title: xxxx
+#       duration: xxxx
+#       spotity: xx
+#       itunes: xxx
+#       number: '02'
+
+####################################################
+
+- title: Land of the Blind
+  slug: land-of-the-blind
+  published: y
+  featured: y
+  feature_sort: 2
+  year: 2014
+  cover: /img/land-of-the-blind.jpg
+  format: Album (stream and download)
+  itunes: https://itunes.apple.com/dk/album/land-of-the-blind/id972673505
+  spotify: xxx
+  tracks:
+    - title: You Killed Hope
+      duration: '3:51'
+      number: '01'
+
+    - title: Breathing
+      duration: '3:34'
+      number: '02'
+
+    - title: Elevate
+      duration: '3:53'
+      number: '03'
+
+    - title: Circle After Circle
+      duration: '3:58'
+      number: '04'
+
+    - title: Shakedown
+      duration: '4:16'
+      number: '05'
+
+    - title: Tainted Ways
+      duration: '5:46'
+      number: '06'
+
+    - title: Something Real
+      duration: '3:41'
+      number: '07'
+
+    - title: Perfect Lie
+      duration: '3:21'
+      number: '08'
+
+    - title: Drowning Slowly
+      duration: '4:33'
+      number: '09'
+
+    - title: Faith
+      duration: '3:30'
+      number: '10'
+
+####################################################
+
+- title: Breathing
+  published: y
+  featured: y
+  feature_sort: 1
+  year: 2014
+  slug: breathing
+  cover: /img/breathing_cover_500.jpg
+  format: Single (stream and download)
+  itunes: https://itunes.apple.com/dk/album/breathing-single/id885022154
+  spotify: http://open.spotify.com/track/5NQbasSeE3MID10QFa5qwC
+
+  tracks:
+    - title: Breathing
+      duration: 3:34
+      number: '01'
+      spotity: http://open.spotify.com/track/2KCryMWdSiHK5TNABpHxlx
+      itunes: https://itunes.apple.com/dk/album/breathing-single/id885022154
+
+####################################################
+
+- title: Tainted Ways
+  published: y
+  featured: y
+  feature_sort: 3
+  format: Single (stream and download)
+  year: 2013
+  slug: tainted-ways
+  cover: /img/tainted_ways_cover_500.jpg
+  itunes: https://itunes.apple.com/dk/album/tainted-ways-single/id787102526
+  spotify: http://open.spotify.com/track/5NQbasSeE3MID10QFa5qwC
+
+  tracks:
+    - title: Tainted Ways
+      duration: 05:47
+      spotity: xx
+      itunes: xxx
+      number: '01'
+
+    - title: Tainted Ways (radio edit)
+      duration: 03:52
+      spotity: xx
+      itunes: xxx
+      number: '02'
+
+####################################################
+
+- title: The 2012 one-song-a-month marathon
+  description: Our project in 2012 was to write, record, and release one song each and every month throughout the year. This is the result.
+  published: y
+  featured: n
+  feature_sort: 3
+  year: 2012
+  format: Stream and download
+  cover: /img/a3838405953_2.jpg
+  slug: 2012-project
+
+  reverb: http://www.reverbnation.com/playlist/view_playlist/-4?page_object=artist_2828114
+  bandcamp: http://officialmydyingday.bandcamp.com/
+
+  tracks:
+    - title: Something Real
+      number: '01'
+      duration: '03:42'
+
+    - title: Perfect Lie
+      number: '02'
+      duration: '03:17'
+
+    - title: Drowning Slowly
+      number: '03'
+      duration: '04:30'
+
+    - title: Faith
+      number: '04'
+      duration: '03:30'
+
+    - title: The Worst Thing
+      number: '05'
+      duration: '03:42'
+
+    - title: Dirt
+      number: '06'
+      duration: '03:53'
+
+    - title: Breathing
+      number: '07'
+      duration: '03:34'
+
+    - title: Tear Me Down
+      number: '08'
+      duration: '03:59'
+
+    - title: Circle After Circle
+      number: '09'
+      duration: '03:55'
+
+    - title: Breaking Out
+      number: '10'
+      duration: '02:48'
+
+    - title: Shakedown
+      number: '11'
+      duration: '04:12'
+
+    - title: Nihilism
+      number: '12'
+      duration: '03:56'
+
+####################################################
+
+- title: Fragile Alliance
+  published: y
+  featured: n
+  feature_sort: 1
+  year: 2010
+  artist: my dyingDay
+  format: CD
+  slug: fragile-alliance
+  cover: /img/fragile-cover-full.jpg
+  soundcloud: https://soundcloud.com/mydyingday/sets/promo
+
+  tracks:
+
+    - title: A New Bread
+      duration: '04:44'
+      number: '01'
+
+    - title: Fragile Alliance
+      duration: '03:46'
+      number: '02'
+
+    - title: 10.000 Lies
+      duration: '03:46'
+      number: '03'
+
+    - title: Broken Halo
+      duration: '04:57'
+      number: '04'
+

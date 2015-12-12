@@ -1,0 +1,15 @@
+- name: Anders
+  instrument: Vocals & Guitars
+  image: /img/members/anders231.jpg
+
+- name: Kim
+  instrument: Guitars, Synth & Vocals
+  image: /img/members/kim231.jpg
+
+- name: Storm
+  instrument: Bass
+  image: /img/members/thomas231.jpg
+
+- name: Jeppe
+  instrument: Drums
+  image: /img/members/jeppe231.jpg
