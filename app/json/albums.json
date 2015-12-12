@@ -1,0 +1,432 @@
+{
+    "albums": [
+    {
+        "Name": "Land of the Blind",
+        "ID": "land-of-the-blind",
+        "Cover": "/img/land-of-the-blind.jpg",
+        "Type": "Album",
+        "Format": "stream + download",
+        "Year": "2014",
+
+        "iTunesID": "972673505",
+        "iTunesSlug": "land-of-the-blind",
+        "SpotifyID": "",
+
+        "Tracks": [
+            {
+            "number": "01",
+            "title": "XXXXXXX",
+            "duration": "XXXXX",
+            "spotify": "XXXX",
+            "itunes": "XXXX",
+            "reverbnation": "",
+            "soundcloud": "",
+            "bandcamp": "",
+
+            "bandcampslug": "",
+            "reverbslug": ""
+            },{
+            "number": "02",
+            "title": "XXXXXXX",
+            "duration": "XXXXX",
+            "spotify": "XXXX",
+            "itunes": "XXXX",
+            "reverbnation": "",
+            "soundcloud": "",
+            "bandcamp": "",
+
+            "bandcampslug": "",
+            "reverbslug": ""
+            },{
+            "number": "03",
+            "title": "XXXXXXX",
+            "duration": "XXXXX",
+            "spotify": "XXXX",
+            "itunes": "XXXX",
+            "reverbnation": "",
+            "soundcloud": "",
+            "bandcamp": "",
+
+            "bandcampslug": "",
+            "reverbslug": ""
+            },{
+            "number": "04",
+            "title": "XXXXXXX",
+            "duration": "XXXXX",
+            "spotify": "XXXX",
+            "itunes": "XXXX",
+            "reverbnation": "",
+            "soundcloud": "",
+            "bandcamp": "",
+
+            "bandcampslug": "",
+            "reverbslug": ""
+            },{
+            "number": "05",
+            "title": "XXXXXXX",
+            "duration": "XXXXX",
+            "spotify": "XXXX",
+            "itunes": "XXXX",
+            "reverbnation": "",
+            "soundcloud": "",
+            "bandcamp": "",
+
+            "bandcampslug": "",
+            "reverbslug": ""
+            },{
+            "number": "06",
+            "title": "XXXXXXX",
+            "duration": "XXXXX",
+            "spotify": "XXXX",
+            "itunes": "XXXX",
+            "reverbnation": "",
+            "soundcloud": "",
+            "bandcamp": "",
+
+            "bandcampslug": "",
+            "reverbslug": ""
+            },{
+            "number": "07",
+            "title": "XXXXXXX",
+            "duration": "XXXXX",
+            "spotify": "XXXX",
+            "itunes": "XXXX",
+            "reverbnation": "",
+            "soundcloud": "",
+            "bandcamp": "",
+
+            "bandcampslug": "",
+            "reverbslug": ""
+            },{
+            "number": "08",
+            "title": "XXXXXXX",
+            "duration": "XXXXX",
+            "spotify": "XXXX",
+            "itunes": "XXXX",
+            "reverbnation": "",
+            "soundcloud": "",
+            "bandcamp": "",
+
+            "bandcampslug": "",
+            "reverbslug": ""
+            },{
+            "number": "09",
+            "title": "XXXXXXX",
+            "duration": "XXXXX",
+            "spotify": "XXXX",
+            "itunes": "XXXX",
+            "reverbnation": "",
+            "soundcloud": "",
+            "bandcamp": "",
+
+            "bandcampslug": "",
+            "reverbslug": ""
+            },{
+            "number": "10",
+            "title": "XXXXXXX",
+            "duration": "XXXXX",
+            "spotify": "XXXX",
+            "itunes": "XXXX",
+            "reverbnation": "",
+            "soundcloud": "",
+            "bandcamp": "",
+
+            "bandcampslug": "",
+            "reverbslug": ""
+            }
+
+        ]
+
+    },
+
+
+
+    {
+        "Name": "Breathing",
+        "ID": "breathing",
+        "Cover": "/img/breathing_cover_500.jpg",
+        "Type": "Single",
+        "Format": "stream + download",
+        "Year": "2014",
+
+        "iTunesID": "885022154",
+        "iTunesSlug": "breathing-single",
+        "SpotifyID": "",
+
+        "Tracks": [{
+            "number": "01",
+            "title": "Breathing",
+            "duration": "03:34",
+            "spotify": "2KCryMWdSiHK5TNABpHxlx",
+            "itunes": "885022154",
+            "reverbnation": "",
+            "soundcloud": "",
+            "bandcamp": "",
+
+            "bandcampslug": "",
+            "reverbslug": ""
+        }]
+    }, {
+        "Name": "Tainted Ways",
+        "ID": "tainted-ways",
+        "Cover": "/img/tainted_ways_cover_500.jpg",
+        "Type": "Single",
+        "Format": "stream + download",
+        "Year": "2013",
+
+        "iTunesID": "787102526",
+        "iTunesSlug": "tainted-ways",
+        "SpotifyID": "",
+
+        "Tracks": [{
+            "number": "01",
+            "title": "Tainted Ways",
+            "duration": "05:47",
+            "spotify": "5NQbasSeE3MID10QFa5qwC",
+            "itunes": "787102571",
+            "reverbnation": "",
+            "soundcloud": "",
+            "bandcamp": "",
+
+            "bandcampslug": "",
+            "reverbslug": ""
+        }, {
+            "number": "02",
+            "title": "Tainted Ways (radio edit)",
+            "duration": "03:52",
+            "spotify": "1SYXAXrKZyTQUyU3kC4hn5",
+            "itunes": "787102572",
+            "reverbnation": "",
+            "soundcloud": "",
+            "bandcamp": "",
+
+            "bandcampslug": "",
+            "reverbslug": ""
+        }]
+    }, {
+        "Name": "The 2012 one-song-a-month marathon",
+        "ID": "2012-project",
+        "Cover": "/img/a3838405953_2.jpg",
+        "Type": "Project",
+        "Format": "Stream + Download",
+        "Year": "2012",
+
+        "iTunesID": "",
+        "iTunesSlug": "",
+        "SpotifyID": "",
+
+        "Tracks": [{
+                "number": "01",
+                "title": "Something Real",
+                "duration": "03:42",
+                "spotify": "",
+                "itunes": "",
+                "reverbnation": "15547829",
+                "soundcloud": "",
+                "bandcamp": "933173831",
+
+                "bandcampslug": "something-real",
+                "reverbslug": "something-real"
+            }, {
+                "number": "02",
+                "title": "Perfect Lie",
+                "duration": "03:17",
+                "spotify": "",
+                "itunes": "",
+                "reverbnation": "14460204",
+                "soundcloud": "",
+                "bandcamp": "47834673",
+
+                "bandcampslug": "perfect-lie",
+                "reverbslug": "perfect-lie"
+            }, {
+                "number": "03",
+                "title": "Drowning Slowly",
+                "duration": "04:30",
+                "spotify": "",
+                "itunes": "",
+                "reverbnation": "15547837",
+                "soundcloud": "",
+                "bandcamp": "2600610246",
+
+                "bandcampslug": "drowning-slowly",
+                "reverbslug": "drowning-slowly"
+            }, {
+                "number": "04",
+                "title": "Faith",
+                "duration": "03:30",
+                "spotify": "",
+                "itunes": "",
+                "reverbnation": "15547863",
+                "soundcloud": "",
+                "bandcamp": "1639635675",
+
+                "bandcampslug": "faith",
+                "reverbslug": "faith"
+            }, {
+                "number": "05",
+                "title": "The Worst Thing",
+                "duration": "03:42",
+                "spotify": "",
+                "itunes": "",
+                "reverbnation": "15547941",
+                "soundcloud": "",
+                "bandcamp": "2541654454",
+
+                "bandcampslug": "the-worst-thing",
+                "reverbslug": "the-worst-thing"
+            }, {
+                "number": "06",
+                "title": "Dirt",
+                "duration": "03:53",
+                "spotify": "",
+                "itunes": "",
+                "reverbnation": "15744177",
+                "soundcloud": "",
+                "bandcamp": "826231999",
+
+                "bandcampslug": "dirt",
+                "reverbslug": "dirt"
+            }, {
+                "number": "07",
+                "title": "Breathing",
+                "duration": "03:34",
+                "spotify": "",
+                "itunes": "",
+                "reverbnation": "15547955",
+                "soundcloud": "",
+                "bandcamp": "4139443658",
+
+                "bandcampslug": "breathing",
+                "reverbslug": "breathing"
+            }, {
+                "number": "08",
+                "title": "Tear Me Down",
+                "duration": "03:59",
+                "spotify": "",
+                "itunes": "",
+                "reverbnation": "16048981",
+                "soundcloud": "",
+                "bandcamp": "906672734",
+
+                "bandcampslug": "tear-me-down",
+                "reverbslug": "tear-me-down"
+            }, {
+                "number": "09",
+                "title": "Circle After Circle",
+                "duration": "03:55",
+                "spotify": "",
+                "itunes": "",
+                "reverbnation": "15547976",
+                "soundcloud": "",
+                "bandcamp": "2612071379",
+
+                "bandcampslug": "circle-after-circle",
+                "reverbslug": "circle-after-circle"
+            }, {
+                "number": "10",
+                "title": "Breaking Out",
+                "duration": "02:48",
+                "spotify": "",
+                "itunes": "",
+                "reverbnation": "15547985",
+                "soundcloud": "",
+                "bandcamp": "3682625473",
+
+                "bandcampslug": "breaking-out",
+                "reverbslug": "breaking-out"
+            }, {
+                "number": "11",
+                "title": "Shakedown",
+                "duration": "04:12",
+                "spotify": "",
+                "itunes": "",
+                "reverbnation": "15548002",
+                "soundcloud": "",
+                "bandcamp": "3000440324",
+
+                "bandcampslug": "shakedown",
+                "reverbslug": "shakedown"
+            }, {
+                "number": "12",
+                "title": "Nihilism",
+                "duration": "03:56",
+                "spotify": "",
+                "itunes": "",
+                "reverbnation": "15661495",
+                "soundcloud": "",
+                "bandcamp": "3108855687",
+
+                "bandcampslug": "nihilism",
+                "reverbslug": "nihilism"
+            }
+
+        ]
+    }, {
+
+        "Name": "Fragile Alliance  Promo (CD)",
+        "ID": "fragile-alliance",
+        "Cover": "/img/fragile-cover-full.jpg",
+        "Type": "Promo",
+        "Format": "CD",
+        "Year": "2007",
+
+        "iTunesID": "",
+        "iTunesSlug": "",
+        "SpotifyID": "",
+
+        "Tracks": [{
+                "number": "01",
+                "title": "A New Bread",
+                "duration": "04:44",
+                "spotify": "",
+                "itunes": "",
+                "reverbnation": "",
+                "soundcloud": "4381571",
+                "bandcamp": "",
+
+                "bandcampslug": "",
+                "reverbslug": ""
+            }, {
+                "number": "02",
+                "title": "Fragile Alliance",
+                "duration": "03:46",
+                "spotify": "",
+                "itunes": "",
+                "reverbnation": "",
+                "soundcloud": "4381572",
+                "bandcamp": "",
+
+                "bandcampslug": "",
+                "reverbslug": ""
+            }, {
+                "number": "03",
+                "title": "10.000 Lies",
+                "duration": "03:46",
+                "spotify": "",
+                "itunes": "",
+                "reverbnation": "",
+                "soundcloud": "4381574",
+                "bandcamp": "",
+
+                "bandcampslug": "",
+                "reverbslug": ""
+            }, {
+                "number": "04",
+                "title": "Broken Halo",
+                "duration": "04:57",
+                "spotify": "",
+                "itunes": "",
+                "reverbnation": "",
+                "soundcloud": "4381575",
+                "bandcamp": "",
+
+                "bandcampslug": "",
+                "reverbslug": ""
+            }
+
+
+
+        ]
+    }]
+}
