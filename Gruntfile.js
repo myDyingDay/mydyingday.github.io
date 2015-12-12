@@ -416,7 +416,7 @@ module.exports = function (grunt) {
     'sass:server',
     'coffeelint:check',
     'coffee:dist',
-    'jshint:all',
+    // 'jshint:all',
     'csslint:check'
     // 'scsslint'
   ]);
