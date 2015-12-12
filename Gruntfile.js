@@ -30,6 +30,10 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/css/**/*.css'],
         tasks: ['copy:stageCss', 'autoprefixer:dist']
       },
+      js: {
+        files: ['<%= yeoman.app %>/js/**/*.js'],
+        tasks: ['usemin']
+      },
       coffee: {
         files: ['<%= yeoman.app %>/_src/**/*.coffee'],
         tasks: ['coffee:dist']
@@ -278,7 +282,10 @@ module.exports = function (grunt) {
             // Explicitly add any files your site needs for distribution here.
             '_bower_components/jquery/jquery.min.js',
             'favicon.ico',
-            'apple-touch*.png'
+            'apple-touch*.png',
+
+            'json/albums.json',
+            'json/tweets.json',
           ],
           dest: '<%= yeoman.dist %>'
         }]
@@ -291,6 +298,12 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.app %>/css',
           src: '**/*.css',
           dest: '.tmp/css'
+        },{
+            expand: true,
+            dot: true,
+            cwd: '<%= yeoman.app %>/json',
+            src: '**/*.json',
+            dest: '.tmp/json'
         }]
       }
     },
@@ -314,8 +327,8 @@ module.exports = function (grunt) {
         options: {
           remote: 'https://github.com/Djarnis/yo-jekyllrb.git',
           branch: 'gh-pages',
-          commit: true,
-          push: true
+          commit: false,
+          push: false
         }
       }
     },
