@@ -95,7 +95,7 @@ title: my dyingDay - rock n roll from Copenhagen
         <div id="coverflow">
 
             {% for cover in covers limit:3 %}
-                <a href="#{{ cover.slug }}"><img id="cf-{{ cover.slug }}" src="{{ cover.cover }}" data-artist="{{ cover.artist }}" data-album="{{ cover.title }}" /></a>
+                <a href="#{{ cover.slug }}"><img id="cf-{{ cover.feature_sort }}" src="{{ cover.cover }}" data-artist="{{ cover.artist }}" data-album="{{ cover.title }}" /></a>
             {% endfor %}
 
         </div>
