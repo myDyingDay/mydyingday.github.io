@@ -1,9 +1,9 @@
 // var staticDomain = "http://static.mydyingdayrocks.com";
-var staticDomain = "";
+var staticDomain = '';
 
 (function() {
 
-    $("#header").sticky({
+    $('#header').sticky({
         topSpacing: 0
     });
 
@@ -16,14 +16,14 @@ var staticDomain = "";
     var page_nav = '';
     jQuery('a').click(function() {
         page_nav = jQuery(this).attr('href');
-        if (page_nav.search('#') >= 0 && page_nav.length > 2 && page_nav != '#myCarousel') {
+        if (page_nav.search('#') >= 0 && page_nav.length > 2 && page_nav !== '#myCarousel') {
             jQuery('html,body').animate({
-                "scrollTop": jQuery('' + page_nav).offset().top - 40
+                'scrollTop': jQuery('' + page_nav).offset().top - 40
             }, 600);
             if (jQuery('html').hasClass('lt-ie9')) {
                 jQuery('body').hasClass('no-history');
             } else {
-                window.history.pushState("", "", page_nav);
+                window.history.pushState(', ', page_nav);
             }
             return false;
         }
@@ -64,15 +64,15 @@ var staticDomain = "";
             web_address = web_address.split('#');
             page_nav = web_address[1];
             jQuery('html,body').animate({
-                "scrollTop": jQuery('#' + page_nav).offset().top - 60
+                'scrollTop': jQuery('#' + page_nav).offset().top - 60
             }, 600);
         }
     });
 
 
     var displaylimit = 5;
-    var twitterprofile = "mydyingdayrocks";
-    var screenname = "my dyingDay";
+    var twitterprofile = 'mydyingdayrocks';
+    var screenname = 'my dyingDay';
     var showdirecttweets = false;
     var showretweets = false;
     var showtweetlinks = true;
@@ -103,27 +103,27 @@ var staticDomain = "";
                 var isdirect = false;
                 var tweetid = feeds[i].id_str;
 
-                if (typeof feeds[i].retweeted_status != 'undefined') {
+                if (typeof feeds[i].retweeted_status !== 'undefined') {
                     profileimage = feeds[i].retweeted_status.user.profile_image_url_https;
                     tweetscreenname = feeds[i].retweeted_status.user.name;
                     tweetusername = feeds[i].retweeted_status.user.screen_name;
                     tweetid = feeds[i].retweeted_status.id_str;
                     status = feeds[i].retweeted_status.text;
                     isaretweet = true;
-                };
+                }
 
 
-                if (feeds[i].text.substr(0, 1) == "@") {
+                if (feeds[i].text.substr(0, 1) === '@') {
                     isdirect = true;
                 }
 
-                if (((showretweets == true) || ((isaretweet == false) && (showretweets == false))) && ((showdirecttweets == true) || ((showdirecttweets == false) && (isdirect == false)))) {
+                if (((showretweets === true) || ((isaretweet === false) && (showretweets === false))) && ((showdirecttweets === true) || ((showdirecttweets === false) && (isdirect === false)))) {
                     if ((feeds[i].text.length > 1) && (displayCounter <= displaylimit)) {
-                        if (showtweetlinks == true) {
+                        if (showtweetlinks === true) {
                             status = addlinks(status);
                         }
                         var carouselClass = '';
-                        if (displayCounter == 1) {
+                        if (displayCounter === 1) {
                             carouselClass = 'active';
                         } else {}
 
@@ -132,10 +132,10 @@ var staticDomain = "";
                         feedHTML += '<p>';
                         feedHTML += '<span class="tweet-time"><a href="https://twitter.com/' + tweetusername + '/status/' + tweetid + '" target="_blank">' + relative_time(feeds[i].created_at) + '</a></span> ';
                         feedHTML += '' + status + '</p>';
-                        if ((isaretweet == true) && (showretweetindicator == true)) {
+                        if ((isaretweet === true) && (showretweetindicator === true)) {
                             feedHTML += '<div id="retweet-indicator"></div>';
                         }
-                        if (showtweetactions == true) {
+                        if (showtweetactions === true) {
                             feedHTML += '<div id="twitter-actions"><div class="intent" id="intent-reply"><a href="https://twitter.com/intent/tweet?in_reply_to=' + tweetid + '" title="Reply"></a></div><div class="intent" id="intent-retweet"><a href="https://twitter.com/intent/retweet?tweet_id=' + tweetid + '" title="Retweet"></a></div><div class="intent" id="intent-fave"><a href="https://twitter.com/intent/favorite?tweet_id=' + tweetid + '" title="Favourite"></a></div></div>';
                         }
 
@@ -155,9 +155,9 @@ var staticDomain = "";
             var twrap = '<div id="carousel-example-generic" class="carousel slide" data-ride="carousel"><!-- Indicators --><ol class="carousel-indicators">' + feedIndex + '</ol><!-- Wrapper for slides --><div class="carousel-inner">' + feedBody + '</div><!-- Controls --><a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a><a class="right carousel-control" href="#carousel-example-generic" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a></div>';
 
             $('#twitter-feed').html(twrap);
-            $('.carousel').carousel()
+            $('.carousel').carousel();
 
-            if (showtweetactions == true) {
+            if (showtweetactions === true) {
                 $('.twitter-article').hover(function() {
                     $(this).find('#twitter-actions').css({
                         'display': 'block',
@@ -185,18 +185,18 @@ var staticDomain = "";
             }
 
         }).error(function(jqXHR, textStatus, errorThrown) {
-        var error = "";
+        var error = '';
         if (jqXHR.status === 0) {
             error = 'Connection problem. Check file path and www vs non-www in getJSON request';
-        } else if (jqXHR.status == 404) {
+        } else if (jqXHR.status === 404) {
             error = 'Requested page not found. [404]';
-        } else if (jqXHR.status == 500) {
+        } else if (jqXHR.status === 500) {
             error = 'Internal Server Error [500].';
-        } else if (exception === 'parsererror') {
+        } else if (errorThrown === 'parsererror') {
             error = 'Requested JSON parse failed.';
-        } else if (exception === 'timeout') {
+        } else if (errorThrown === 'timeout') {
             error = 'Time out error.';
-        } else if (exception === 'abort') {
+        } else if (errorThrown === 'abort') {
             error = 'Ajax request aborted.';
         } else {
             error = 'Uncaught Error.\n' + jqXHR.responseText;
@@ -221,12 +221,12 @@ var staticDomain = "";
 
 
     function relative_time(time_value) {
-        var values = time_value.split(" ");
-        time_value = values[1] + " " + values[2] + ", " + values[5] + " " + values[3];
+        var values = time_value.split(' ');
+        time_value = values[1] + ' ' + values[2] + ', ' + values[5] + ' ' + values[3];
         var parsed_date = Date.parse(time_value);
         var relative_to = (arguments.length > 1) ? arguments[1] : new Date();
         var delta = parseInt((relative_to.getTime() - parsed_date) / 1000);
-        var shortdate = time_value.substr(4, 2) + " " + time_value.substr(0, 3);
+        var shortdate = time_value.substr(4, 2) + ' ' + time_value.substr(0, 3);
         delta = delta + (relative_to.getTimezoneOffset() * 60);
 
         if (delta < 60) {
@@ -252,31 +252,31 @@ var staticDomain = "";
 
 function OpenAlbum(strAlbum, strTrack) {
 
-    var albumSelector = "";
-    var albumTrackList = "";
-    var albumCoverUrl = "";
-    var albumTitle = "";
+    var albumSelector = '';
+    var albumTrackList = '';
+    var albumCoverUrl = '';
+    var albumTitle = '';
 
 
 
     var TrackSelected;
 
-    var albumiTunesID = "";
-    var albumiTunesSlug = "";
-    var albumSpotifyID = "";
+    var albumiTunesID = '';
+    var albumiTunesSlug = '';
+    var albumSpotifyID = '';
 
-    var iTunesUrl = "";
-    var spotifyUrl = "";
-    var reverbNationUrl = "";
-    var reverbNationSlug = "";
+    var iTunesUrl = '';
+    var spotifyUrl = '';
+    var reverbNationUrl = '';
+    var reverbNationSlug = '';
 
-    var bandCampUrl = "";
-    var bandCampSlug = "";
-    var soundCloudUrl = "";
+    var bandCampUrl = '';
+    var bandCampSlug = '';
+    var soundCloudUrl = '';
 
-    var trackTitle = "";
+    var trackTitle = '';
 
-    $(".popover").remove();
+    $('.popover').remove();
 
     $.ajaxSetup({
         cache: true
@@ -299,7 +299,7 @@ function OpenAlbum(strAlbum, strTrack) {
 
                     var Tracks = item.Tracks;
                     for (var t = 0; t < Tracks.length; t++) {
-                        if (strTrack == Tracks[t].number) {
+                        if (strTrack === Tracks[t].number) {
                             TrackSelected = Tracks[t];
 
                             iTunesUrl = Tracks[t].itunes;
@@ -327,7 +327,7 @@ function OpenAlbum(strAlbum, strTrack) {
 
 
             var s = '<div id="playerouter" data-container="body" data-toggle="popover" data-placement="left" data-content="Press PLAY to start the track ...">';
-            var d = "";
+            var d = '';
 
             if (reverbNationUrl.length > 0) {
                 s += '<iframe class="widget_iframe" src="http://www.reverbnation.com/widget_code/html_widget/artist_2828114?widget_id=50&pwc[design]=customized&pwc[background_color]=%23000000&pwc[included_songs]=0&pwc[song_ids]=' + reverbNationUrl + '&pwc[photo]=0&pwc[size]=fit" width="100%" height="80" frameborder="0" scrolling="no"></iframe>';
@@ -383,23 +383,23 @@ function OpenAlbum(strAlbum, strTrack) {
 
 
             $('#playerwin').on('hide.bs.modal', function(e) {
-                $(".popover").remove();
-            })
+                $('.popover').remove();
+            });
 
 
         }).error(function(jqXHR, textStatus, errorThrown) {
-        var error = "";
+        var error = '';
         if (jqXHR.status === 0) {
             error = 'Connection problem. Check file path and www vs non-www in getJSON request';
-        } else if (jqXHR.status == 404) {
+        } else if (jqXHR.status === 404) {
             error = 'Requested page not found. [404]';
-        } else if (jqXHR.status == 500) {
+        } else if (jqXHR.status === 500) {
             error = 'Internal Server Error [500].';
-        } else if (exception === 'parsererror') {
+        } else if (errorThrown === 'parsererror') {
             error = 'Requested JSON parse failed.';
-        } else if (exception === 'timeout') {
+        } else if (errorThrown === 'timeout') {
             error = 'Time out error.';
-        } else if (exception === 'abort') {
+        } else if (errorThrown === 'abort') {
             error = 'Ajax request aborted.';
         } else {
             error = 'Uncaught Error.\n' + jqXHR.responseText;
@@ -411,7 +411,7 @@ function OpenAlbum(strAlbum, strTrack) {
 }
 
 function playVideo(idVid, title) {
-    $('#videoplayer').html('<div style="padding:100px;text-align:center;font-size:20px;">Loading video ...</div>')
+    $('#videoplayer').html('<div style="padding:100px;text-align:center;font-size:20px;">Loading video ...</div>');
     var s = '<div style="background-color:rgba(0, 0, 0, 0.5);;border-top:1px solid #FFF"><div class="container"><div class="pull-left" style="width:80%; overflow:hidden;"><h3><span class="glyphicon glyphicon-expand" ></span> Video: ' + title + '</h3></div><div class="pull-right"><span class="close" onclick="$(\'#videoplayer\').html(\'\');" style="font-size: 51px;font-weight: bold;line-height: 1;color: #FFF;text-shadow: 0 1px 0 #fff;opacity: .9;filter: alpha(opacity=90);">&times;</span></div></div></div><div style="border-bottom:1px solid #FFF;padding-bottom:20px;margin-bottom:15px;background-color:rgba(0, 0, 0, 0.5);"><div class="videoembed"><div class="videowrapper"><div class="videocontainer"><iframe class="videoembedx youtube" src="//www.youtube.com/embed/' + idVid + '" frameborder="0" allowfullscreen=""></iframe></div></div></div></div>';
     $('#videoplayer').html(s);
 
