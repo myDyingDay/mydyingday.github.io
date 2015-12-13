@@ -4,6 +4,7 @@ title: my dyingDay - rock n roll from Copenhagen
 ---
 {% assign albums = (site.data.albums | where: 'published','y') %}
 {% assign covers = (albums | where: 'featured', 'y' | sort: 'feature_sort') %}
+{% assign videos = (site.data.videos) %}
 
 <span id="home"></span>
 <div class="navbar-wrapper " id="header">
@@ -90,26 +91,22 @@ title: my dyingDay - rock n roll from Copenhagen
      -->
 
     <!-- COVER FLOW -->
-
-
     {% if covers.size == 0 %}
-        <!-- No covers :/ -->
+        No cover!
     {% endif %}
 
     <div class="wrapper">
         <div id="coverflow">
-
             {% for cover in covers limit:3 %}
                 <a href="#{{ cover.slug }}"><img id="cf-{{ cover.feature_sort }}" src="{{ cover.cover }}" data-artist="{{ cover.artist }}" data-album="{{ cover.title }}" /></a>
             {% endfor %}
-
         </div>
     </div>
 
 </div>
 
 
-<!-- Status -->
+<!-- STATUS -->
 <div id="statusblock">
     <div class="container">
         <h4>
@@ -128,10 +125,8 @@ title: my dyingDay - rock n roll from Copenhagen
 
 
 <!-- ALBUMS -->
-{% assign albums = (site.data.albums | where: 'published','y') %}
-
 {% if albums.size == 0 %}
-    <!-- No albums :/ -->
+    No albums
 {% endif %}
 
 <div id="music" class="xpanel">
@@ -271,11 +266,7 @@ title: my dyingDay - rock n roll from Copenhagen
 </div>
 
 
-<!-- Videos -->
-{% assign videos = (site.data.videos) %}
-<!--
-where: 'published','y'
--->
+<!-- VIDEOS -->
 <div id="media" class="xpanel">
     <div class="container">
         <h2 class="headline">
@@ -317,7 +308,7 @@ where: 'published','y'
 </div>
 
 
-
+<!-- LIVE -->
 <div id="live" class="xpanel">
     <div class="container">
         <h2 class="headline no-border">
@@ -364,6 +355,9 @@ where: 'published','y'
         </p>
     </div>
 </div>
+
+
+<!-- THE BAND -->
 <div id="band" class="xpanel">
     <div class="container">
         <h2 class="headline">
@@ -434,6 +428,9 @@ where: 'published','y'
         </div>
     </div>
 </div>
+
+
+<!-- CONNECT -->
 <div id="connect" class="xpanel">
     <div class="container">
         <h2 class="headline"><span class="glyphicon glyphicon-heart"></span> Connect <small>with my dyingDay</small></h2>
