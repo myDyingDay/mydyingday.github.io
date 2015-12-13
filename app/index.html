@@ -2,6 +2,8 @@
 layout: default
 title: my dyingDay - rock n roll from Copenhagen
 ---
+{% assign albums = (site.data.albums | where: 'published','y') %}
+{% assign covers = (albums | where: 'featured', 'y' | sort: 'feature_sort') %}
 <span id="home"></span>
 <div class="navbar-wrapper " id="header">
     <div
@@ -87,7 +89,7 @@ title: my dyingDay - rock n roll from Copenhagen
      -->
 
     <!-- COVER FLOW -->
-    {% assign covers = (site.data.albums | where: 'published','y' | where: 'featured', 'y' | sort: 'feature_sort') %}
+
 
     {% if covers.size == 0 %}
         <!-- No covers :/ -->
