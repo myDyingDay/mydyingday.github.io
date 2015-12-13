@@ -87,7 +87,7 @@ title: my dyingDay - rock n roll from Copenhagen
      -->
 
     <!-- COVER FLOW -->
-    {% assign covers = (site.data.albums | where: 'featured', 'y') %}
+    {% assign covers = (site.data.albums | where: 'published','y' | where: 'featured', 'y' | sort: 'feature_sort') %}
 
     {% if covers.size == 0 %}
         <!-- No covers :/ -->
