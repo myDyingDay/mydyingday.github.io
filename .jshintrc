@@ -14,5 +14,6 @@
   "undef": true,
   "strict": false,
   "trailing": true,
+  "jquery": true,
   "smarttabs": true
 }
