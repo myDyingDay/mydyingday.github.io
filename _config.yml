@@ -3,7 +3,7 @@
 # 2. config.build.yml
 # 3. config.yml
 
-name: yo_jekyllrb
+name: my dyingDay
 description:
 author:
   name: Jeppe Bårris
@@ -34,7 +34,8 @@ markdown: kramdown
 #     coderay_bold_every: 10
 #     coderay_css: style
 
-pygments: false
+# pygments: false
+highlighter: false
 
 
 collections:
