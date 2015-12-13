@@ -25,7 +25,7 @@
   published: y
   featured: y
   feature_sort: 2
-  year: 2014
+  year: 2015
   cover: /img/land-of-the-blind.jpg
   format: Album (stream and download)
   itunes: https://itunes.apple.com/dk/album/land-of-the-blind/id972673505
@@ -34,42 +34,62 @@
     - title: You Killed Hope
       duration: '3:51'
       number: '01'
+      # https://itun.es/dk/HhD-5?i=972673506
+      # https://open.spotify.com/track/4cvNK048HEj7XKZPbButXW
 
     - title: Breathing
       duration: '3:34'
       number: '02'
+      # https://itun.es/dk/HhD-5?i=972673507
+      # https://open.spotify.com/track/7eOhc5M5lZcL38rlSDJzoe
 
     - title: Elevate
       duration: '3:53'
       number: '03'
+      # https://itun.es/dk/HhD-5?i=972673508
+      # https://open.spotify.com/track/6ZCnq7FCWVhVQkDj3egYI8
 
     - title: Circle After Circle
       duration: '3:58'
       number: '04'
+      # https://itun.es/dk/HhD-5?i=972673509
+      # https://open.spotify.com/track/1UxxbF8m8PFaB0BoFzgMEV
 
     - title: Shakedown
       duration: '4:16'
       number: '05'
+      # https://itun.es/dk/HhD-5?i=972673512
+      # https://open.spotify.com/track/0c5UTWNsFAKnCVeHrNfiCv
 
     - title: Tainted Ways
       duration: '5:46'
       number: '06'
+      # https://itun.es/dk/HhD-5?i=972673513
+      # https://open.spotify.com/track/15qLHZpNjW979G2XZFgXQP
 
     - title: Something Real
       duration: '3:41'
       number: '07'
+      # https://itun.es/dk/HhD-5?i=972673514
+      # https://open.spotify.com/track/3Shf8JrNQPM7g9mCshdmD0
 
     - title: Perfect Lie
       duration: '3:21'
       number: '08'
+      # https://itun.es/dk/HhD-5?i=972673515
+      # https://open.spotify.com/track/7glQVYnFNrn9hKEq1NDnvN
 
     - title: Drowning Slowly
       duration: '4:33'
       number: '09'
+      # https://itun.es/dk/HhD-5?i=972673516
+      # https://open.spotify.com/track/2DeOHP7IPYfhOqb9X2yJY2
 
     - title: Faith
       duration: '3:30'
       number: '10'
+      # https://itun.es/dk/HhD-5?i=972673517
+      # https://open.spotify.com/track/4qYE6kTvrEmO4WKDDvIda7
 
 ####################################################
 
