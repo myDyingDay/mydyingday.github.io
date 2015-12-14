@@ -1,15 +1,17 @@
-# humanstxt.org/
-# The humans responsible & technology colophon
+/* TEAM */
+    Web designer: Jeppe Bårris
+    Twitter: @djarnis
 
-# TEAM
 
-    <name> -- <role> -- <twitter>
+/* THANKS */
 
-# THANKS
+    Our moms
 
-    <name>
 
-# TECHNOLOGY COLOPHON
-
-    HTML5, CSS3
-    Normalize.css, jQuery, Modernizr
+/* SITE */
+    Site URL:   http://mydyingdayrocks.com
+    Language:   English
+    Contact:    mydyingdayrocks@gmail.com
+    Twitter:    @mydyingdayrocks
+    Location:   Copenhagen, DK
+    Built with: Jekyll, HTML5, CSS3, jQuery
