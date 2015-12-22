@@ -3,7 +3,7 @@
     {
         "Name": "Land of the Blind",
         "ID": "land-of-the-blind",
-        "Cover": "/img/land-of-the-blind.jpg",
+        "Cover": "/img/covers/land-of-the-blind.jpg",
         "Type": "Album",
         "Format": "stream + download",
         "Year": "2015",
@@ -144,7 +144,7 @@
     {
         "Name": "Breathing",
         "ID": "breathing",
-        "Cover": "/img/breathing_cover_500.jpg",
+        "Cover": "/img/covers/breathing_cover_500.jpg",
         "Type": "Single",
         "Format": "stream + download",
         "Year": "2014",
@@ -169,7 +169,7 @@
     }, {
         "Name": "Tainted Ways",
         "ID": "tainted-ways",
-        "Cover": "/img/tainted_ways_cover_500.jpg",
+        "Cover": "/img/covers/tainted_ways_cover_500.jpg",
         "Type": "Single",
         "Format": "stream + download",
         "Year": "2013",
@@ -206,7 +206,7 @@
     }, {
         "Name": "The 2012 one-song-a-month marathon",
         "ID": "2012-project",
-        "Cover": "/img/a3838405953_2.jpg",
+        "Cover": "/img/covers/a3838405953_2.jpg",
         "Type": "Project",
         "Format": "Stream + Download",
         "Year": "2012",
@@ -366,7 +366,7 @@
 
         "Name": "Fragile Alliance  Promo (CD)",
         "ID": "fragile-alliance",
-        "Cover": "/img/fragile-cover-full.jpg",
+        "Cover": "/img/covers/fragile-cover-full.jpg",
         "Type": "Promo",
         "Format": "CD",
         "Year": "2007",
